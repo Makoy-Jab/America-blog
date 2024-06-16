@@ -1,0 +1,88 @@
+body {
+    font-family: Times New Roman, sans-serif;
+    background-color: #9daeb8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header div {
+    display: flex;
+    align-items: center;
+}
+.mode-button, .lang-button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #293847;
+    color: white;
+    border-radius: 5px;
+}
+.info-button, .back-button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #293847;
+    color: white;
+    border-radius: 5px;
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin: 20px 0;
+}
+.button {
+    margin: 10px;
+    text-align: center;
+}
+.button a {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+.button a:hover {
+    transform: scale(1.15);
+}
+.button span {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+}
+.dark-mode {
+    background-color: #282727;
+    color: #ffffff;
+}
+.dark-mode .header {
+    background-color: #444;
+}
+.dark-mode .mode-button, .dark-mode .lang-button {
+    background-color: #293847;
+}
+.dark-mode .button a {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}

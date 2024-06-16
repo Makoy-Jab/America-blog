@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monatliche Übersicht Januar</title>
+    <link rel="stylesheet" href="../css/generalMonths.css">
+</head>
+<body>
+    <div class="header">
+        <button class="lang-button" onclick="toggleLanguage()">DE/EN</button>
+        <button class="back-button" onclick="location.href='http://127.0.0.1:3000/Blog Startseite'">Zur Startseite</button>
+        <div class="flag">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Flag_of_the_United_States_%281877%E2%80%931890%29.svg/2560px-Flag_of_the_United_States_%281877%E2%80%931890%29.svg.png" width=96 height="57""US Flag">
+        </div>
+        <div class="flag">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1200px-Flag_of_California.svg.png" width=96 height="57""US Flag">
+        </div>
+        <button class="info-button" onclick="location.href='http://127.0.0.1:3000/Info'">Über diesen Blog</button>
+        <button class="mode-button" onclick="toggleMode()">Light/Dark</button>
+    </div>
+    <h1><ins> Wochen Übersicht Januar </ins></h1> 
+    <p>________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</p>
+    <div class="container">
+        <div class="button">
+            <a href="week1.html" style="background-image: url('https://images.ctfassets.net/rc3dlxapnu6k/1747kWWRiEJlNKRXrGqGrG/61721712b3bf190838a33f82fc9636f6/USA__Kalifornien__San_Diego.jpg?w=3000&h=1687&q=50&fm=webp');"></a>
+            <span>Kalenderwoche 1</span>
+        </div>
+        <div class="button">
+            <a href="week2.html" style="background-image: url('https://images.ctfassets.net/rc3dlxapnu6k/4W0smzHsfQZtFwE1N5fuaN/936360727cdec4c859938ffe61044379/Kalifornien_Mammoth_Lake.jpg?w=2075&h=1167&q=50&fm=webp');"></a>
+            <span>Kalenderwoche 2</span>
+        </div>
+        <div class="button">
+            <a href="week3.html" style="background-image: url('https://images.ctfassets.net/rc3dlxapnu6k/5VtY2zLsgWq0nmbklr4Odw/d4a641f30031f9836e10cf7be4a8da89/Kalifornien_Carmel-by-the-Sea.jpg?w=2000&h=1125&q=50&fm=webp');"></a>
+            <span>Kalenderwoche 3</span>
+        </div>
+        <div class="button">
+            <a href="week4.html" style="background-image: url('https://images.ctfassets.net/rc3dlxapnu6k/67z5JDLSvhnnTFhPtvY1Eq/07ba588d7962212a53561729b13e4cb4/USA__Kalifornien__Lake_Tahoe.jpg?w=2300&h=1298&q=50&fm=webp');"></a>
+            <span>Kalenderwoche 4</span>
+        </div>
+        <div class="button">
+            <a href="week5.html" style="background-image: url('https://images.ctfassets.net/rc3dlxapnu6k/6MbZtIbxOpy4ZAill09dyx/76a3399d2e9ad05f15446d3e5d0c8d76/Kalifornien_Joshua_Tree_National_Park.jpg?w=2103&h=1183&q=50&fm=webp');"></a>
+            <span>Kalenderwoche 5</span>
+        </div>
+    </div>
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
