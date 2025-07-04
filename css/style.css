@@ -96,3 +96,85 @@ h1 {
 .dark-mode .button a {
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
+
+/* ✅ Info-Button oben */
+.info-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .info-container a img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+  }
+  .info-container a img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* ✅ Monatsbuttons Grid */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* ✅ Reisemonat-Button */
+  .reisemonat-button {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #293847;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .reisemonat-button:hover {
+    transform: scale(1.03);
+  }
+  
+  /* ✅ Header Abstand */
+  .header {
+    padding: 20px 30px;
+  }
+  
+  /* 📱 Mobile: 1 Spalte, runde Buttons */
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+    .button a {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+    .info-container a img {
+      width: 120px;
+      height: 120px;
+    }
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+  
+  /* 💻 Tablet: 6 Spalten, 2 Zeilen */
+  @media (min-width: 769px) and (max-width: 1200px) {
+    .container {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  
