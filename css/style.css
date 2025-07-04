@@ -10,27 +10,50 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    padding: 10px 20px;
+    align-items: center;
+    padding: 10px 50px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    gap: 20px
 }
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
 .header div {
     display: flex;
     align-items: center;
 }
+.flag {
+    margin: 0 10px;
+  }
 .mode-button, .lang-button {
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
     border: none;
     background-color: #293847;
     color: white;
     border-radius: 5px;
+    font-size: 1rem;
+    height: 44px;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 h1 {
     text-align: center;
     margin-top: 20px;
     color: #333;
+}
+/* Info-Button oben */
+.info-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 .info-button {
     display: block;
@@ -45,12 +68,17 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
 }
+.info-container a img:hover {
+    transform: scale(1.1);
+  }
 .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
     justify-items: center;
     margin: 20px 0;
+    width: 100%;
+    max-width: 1400px;
 }
 
 .button {
@@ -82,6 +110,11 @@ h1 {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+  }
+  .button p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
   }
 .dark-mode {
     background-color: #282727;
@@ -150,31 +183,56 @@ h1 {
     padding: 20px 30px;
   }
   
-  /* 📱 Mobile: 1 Spalte, runde Buttons */
-  @media (max-width: 768px) {
+  /* 📱 Mobile + iPad Hochformat */
+@media (max-width: 900px) {
     .container {
       grid-template-columns: 1fr;
     }
+  
     .button a {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
     }
+  
     .info-container a img {
       width: 120px;
       height: 120px;
     }
+  
     .header {
       flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+    }
+  
+    .header-buttons {
+      flex-direction: row;
+      justify-content: center;
     }
   }
   
-  /* 💻 Tablet: 6 Spalten, 2 Zeilen */
-  @media (min-width: 769px) and (max-width: 1200px) {
+  /* 💻 iPad Querformat */
+  @media (min-width: 901px) and (max-width: 1199px) {
+    .container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .button a {
+      width: 160px;
+      height: 160px;
+    }
+  
+    .info-container a img {
+      width: 160px;
+      height: 160px;
+    }
+  }
+  
+  /* 🖥️ Große Bildschirme */
+  @media (min-width: 1200px) {
     .container {
       grid-template-columns: repeat(6, 1fr);
     }
   }
-  
